@@ -1,0 +1,11 @@
+curl -X POST \
+  -H "Authorization: token YOUR_PERSONAL_ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "Improving Documentation for Better Clarity",
+    "body": "This pull request aims to improve the documentation of the IntentKit repository to make it more user-friendly and clear. The changes include:\n1. Clarified Instructions: Updated the README.md with clearer instructions on how to set up the project.\n2. Additional Examples: Added more usage examples to help new users understand how to use IntentKit.\n3. Fixes Typos: Corrected minor typos in the documentation.\n4. Structure Improvements: Improved the structure of the documentation to make it easier to follow, particularly for beginners.\n\nThese improvements are intended to enhance the overall user experience and contribute to the growth of the community around IntentKit.",
+    "head": "your-branch-name",  # Gantilah dengan nama branch kamu
+    "base": "main",  # Gantilah dengan branch utama repositori tujuan
+    "labels": ["documentation", "enhancement"]
+  }' \
+  https://api.github.com/repos/IntentKit/IntentKit/pulls
